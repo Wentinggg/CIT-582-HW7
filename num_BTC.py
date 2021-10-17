@@ -15,7 +15,6 @@ def num_BTC(b):
     constant = 210000
     n = float(b / constant)
     era = math.floor(b / constant)
-    print('n = ' + str(n), 'era = ' + str(era))
     count = float((b - constant * era) * 50 / (2 ** era))
     i = 1
 
@@ -25,5 +24,3 @@ def num_BTC(b):
 
     return count
 
-
-# print(num_BTC(525000))
