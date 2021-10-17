@@ -10,7 +10,9 @@ return the total number of tokens that have been mined so far (up to and includi
 The returned value should be a float.
 '''
 def num_BTC(b):
-    c = float(210000 * (2**(b-1)))
-    return c
+    c = 0
+    while b > 0:
+        c += 210000 * (2**(b-1))
+    return float(c)
 
 
