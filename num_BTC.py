@@ -13,6 +13,7 @@ def num_BTC(b):
     c = 0
     while b > 0:
         c += 210000 * (2**(b-1))
+        b -= 1
     return float(c)
 
 
