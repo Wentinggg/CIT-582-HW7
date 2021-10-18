@@ -54,10 +54,10 @@ def get_most_expensive_transaction(block_num):
             max_cost = get_transaction_cost(tx)
     max_tx = HexBytes(max_tx)  #YOUR CODE HERE
     
-    totalcost = 0.45557138106020384
-#     for i in range(10237100, 10237110):
-    print("thisone: " + str(get_block_cost(10237102)))
-    totalcost += get_block_cost(10237102)
-    print("Cost: " + str(totalcost/10 ** 18))
+    totalcost = 0
+    for i in range(10237100, 10237110):
+        print("thisone: " + str(get_block_cost(10237102)))
+        totalcost += (get_block_cost(i) / 10 ** 18)
+        print("Cost: " + str(totalcost))
     
     return max_tx
