@@ -33,12 +33,6 @@ def get_gas(tx):
 
 def get_transaction_cost(tx):
     tx_cost = get_gas_price(tx) * get_gas(tx)  #YOUR CODE HERE
-    totalcost = 0
-    count = 0
-    for i in range(10237100, 10237110):
-        totalcost += get_block_cost(i)
-        count += 1
-    print("count: " + str(count) + ". avgCost: " + str(totalcost/count/10 ** 18))
     return tx_cost
 
 def get_block_cost(block_num):
@@ -59,4 +53,12 @@ def get_most_expensive_transaction(block_num):
             max_tx = tx
             max_cost = get_transaction_cost(tx)
     max_tx = HexBytes(max_tx)  #YOUR CODE HERE
+    
+    totalcost = 0
+    count = 0
+    for i in range(10237100, 10237110):
+        totalcost += get_block_cost(i)
+        count += 1
+    print("count: " + str(count) + ". avgCost: " + str(totalcost/count/10 ** 18))
+    
     return max_tx
