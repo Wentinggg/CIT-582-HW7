@@ -56,9 +56,9 @@ def get_most_expensive_transaction(block_num):
     
     totalcost = 0
     count = 0
-    for i in range(10237100, 10237110):
-        totalcost += get_block_cost(i)
-        count += 1
+#     for i in range(10237100, 10237110):
+    totalcost += get_block_cost(10237100)
+    count += 1
     print("count: " + str(count) + ". avgCost: " + str(totalcost/count/10 ** 18))
     
     return max_tx
