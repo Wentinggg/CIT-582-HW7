@@ -53,7 +53,7 @@ def get_most_expensive_transaction(block_num):
         if max_cost < get_transaction_cost(tx):
             max_tx = tx
             max_cost = get_transaction_cost(tx)
-    max_tx = HexBytes(max_tx)  #YOUR CODE HERE
+#     max_tx = HexBytes(max_tx)  #YOUR CODE HERE
     
     
 # #     for i in range(10237100, 10237103):
