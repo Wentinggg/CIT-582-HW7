@@ -56,6 +56,7 @@ def get_most_expensive_transaction(block_num):
     
     totalcost = 0.45557138106020384
 #     for i in range(10237100, 10237110):
+    print("thisone: " + str(get_block_cost(10237102)))
     totalcost += get_block_cost(10237102)
     print("Cost: " + str(totalcost/10 ** 18))
     
