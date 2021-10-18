@@ -18,12 +18,13 @@ w3 = Web3(Web3.HTTPProvider('http://' + IP_ADDR + ':' + PORT))
 
 def get_transaction(tx):
     tx = w3.eth.get_transaction(tx)
+    print('tx: ' + tx)
     return tx
 
 # Return the gas price used by a particular transaction,
 #   tx is the transaction
 def get_gas_price(tx):
-    gas_price = web3.eth.generate_gas_price(tx) #YOUR CODE HERE
+    gas_price = w3.eth.generate_gas_price(tx) #YOUR CODE HERE
     return gas_price
 
 def get_gas(tx):
