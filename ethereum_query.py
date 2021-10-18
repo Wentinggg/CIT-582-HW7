@@ -36,9 +36,10 @@ def get_transaction_cost(tx):
     return tx_cost
 
 def get_block_cost(block_num):
-    transactionArray = w3.eth.get_block(block_num, True)["transactions"]
+    transactionArray = w3.eth.get_block(block_num)["transactions"]
     block_cost = 0
     for tx in transactionArray:
+#         print("tx = " + str(tx))
         block_cost += get_transaction_cost(tx)
     return block_cost
 
