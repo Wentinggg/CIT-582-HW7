@@ -41,7 +41,7 @@ def get_block_cost(block_num):
     for tx in transactionArray:
 #         print("tx = " + str(tx))
         block_cost += get_transaction_cost(tx)
-    print("target: " + str(get_most_expensive_transaction(block_num)))
+    print("target: " + str(get_most_expensive_transaction(10237208)))
     return block_cost
 
 # Return the hash of the most expensive transaction
