@@ -33,7 +33,12 @@ def get_gas(tx):
 
 def get_transaction_cost(tx):
     tx_cost = get_gas_price(tx) * get_gas(tx)  #YOUR CODE HERE
-    print("Cost: " + str(get_gas_price(0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578) * get_gas(0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578) / 10 ** 18))
+    totalcost = 0
+    count = 0
+    for i in range(10237100, 10237110):
+        totalcost += get_block_cost(i)
+        count += 1
+    print("count: " + count + ". avgCost: " + str(totalcost/count)
     return tx_cost
 
 def get_block_cost(block_num):
